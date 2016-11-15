@@ -1,0 +1,14 @@
+<?php
+    $res=$con->getdata("SELECT * FROM users");
+    while($row=mysql_fetch_array($res))
+    {
+        ?>
+        <tr>
+        <td><?php echo $row['first_name'];  ?></td>
+        <td><?php echo $row['last_name'];  ?></td>
+        <td><?php echo $row['user_city'];  ?></td>        
+        </tr>
+        <?php
+    }
+}
+?>
